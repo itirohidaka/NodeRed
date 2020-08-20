@@ -12,7 +12,7 @@ SyslogIdentifier=node-red
 StandardOutput=syslog
 
 # non-root user to run as
-WorkingDirectory=/home/ubuntu/
+WorkingDirectory=/home/ubuntu/.node-red
 User=ubuntu
 Group=ubuntu
 
