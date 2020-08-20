@@ -13,8 +13,8 @@ WorkingDirectory=/home/ec2-user/.node-red/
 # User/Group that launches node-RED (it's advised to create a new user for Node-RED)
 # You can do : sudo useradd node-red
 # then change the User=root by User=node-red
-User=ec2-user
-Group=ec2-user
+User=centos
+Group=centos
 Nice=10
 SyslogIdentifier=Node-RED
 StandardOutput=syslog
