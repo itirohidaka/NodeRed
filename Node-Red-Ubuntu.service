@@ -9,11 +9,11 @@ Environment="NODE_OPTIONS=--max-old-space-size=128"
 Environment="NODE_RED_OPTIONS=-v"
 #Full Path to Node.js
 ExecStart=/usr/bin/node $NODE_OPTIONS /usr/local/lib/node_modules/node-red/red.js $NODE_RED_OPTIONS
-WorkingDirectory=/home/ec2-user/.node-red/
+WorkingDirectory=/home/ubuntu/.node-red/
 # User/Group that launches node-RED (it's advised to create a new user for Node-RED)
 # You can do : sudo useradd node-red
 # then change the User=root by User=node-red
-User=ec2-user
+User=ubuntu
 Group=nobody
 Nice=10
 SyslogIdentifier=Node-RED
