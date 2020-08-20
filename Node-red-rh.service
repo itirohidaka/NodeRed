@@ -14,7 +14,7 @@ WorkingDirectory=/home/ec2-user/.node-red/
 # You can do : sudo useradd node-red
 # then change the User=root by User=node-red
 User=ec2-user
-Group=nobody
+Group=ec2-user
 Nice=10
 SyslogIdentifier=Node-RED
 StandardOutput=syslog
