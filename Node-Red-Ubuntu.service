@@ -14,7 +14,7 @@ StandardOutput=syslog
 # non-root user to run as
 WorkingDirectory=/home/ubuntu/
 User=ubuntu
-Group=nobody
+Group=ubuntu
 
 [Install]
 WantedBy=multi-user.target
