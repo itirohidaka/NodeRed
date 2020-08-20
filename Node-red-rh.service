@@ -1,0 +1,27 @@
+# To consult the log : journalctl -u Node-RED
+[Unit]
+Description=Node-RED is a tool for wiring together hardware devices, APIs and online services in new and interesting ways.
+After=syslog.target network.target
+Documentation=http://nodered.org/
+
+[Service]
+Environment="NODE_OPTIONS=--max-old-space-size=128"
+Environment="NODE_RED_OPTIONS=-v"
+#Full Path to Node.js
+ExecStart=/usr/bin/node $NODE_OPTIONS /lib/node_modules/node-red/red.js $NODE_RED_OPTIONS
+WorkingDirectory=/home/ec2-user/.node-red/
+# User/Group that launches node-RED (it's advised to create a new user for Node-RED)
+# You can do : sudo useradd node-red
+# then change the User=root by User=node-red
+User=ec2-user
+Group=nobody
+Nice=10
+SyslogIdentifier=Node-RED
+StandardOutput=syslog
+# Make Node-RED restart if it fails
+Restart=on-failure
+# Node-RED need a SIGINT to be notified to stop
+KillSignal=SIGINT
+
+[Install]
+WantedBy=multi-user.target
